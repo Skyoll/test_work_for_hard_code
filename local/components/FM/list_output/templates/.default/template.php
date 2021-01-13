@@ -1,4 +1,7 @@
-<? if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+
+use Bitrix\Main\Localization\Loc;
+
 /** @var array $arParams */
 /** @var array $arResult */
 /** @global CMain $APPLICATION */
@@ -14,17 +17,15 @@ $this->setFrameMode(true);
 ?>
 <div id="container">
     <ul>
-        <li>ID: <?= $arResult['ITEM']['ID'] ?></li>
-        <li>NAME: <?= $arResult['ITEM']['NAME'] ?></li>
+        <li><?= Loc::getMessage("LIST_OUTPUT_ID")?>: <?= $arResult['ITEM']['ID'] ?></li>
+        <li><?= Loc::getMessage("LIST_OUTPUT_NAME")?>: <?= $arResult['ITEM']['NAME'] ?></li>
 
         <?php if (!empty($arResult['CACHE_CREATE_DATA'])): ?>
-            <li>Дата кеша: <?= $arResult['CACHE_CREATE_DATA'] ?></li>
+            <li><?= Loc::getMessage("LIST_OUTPUT_CACHE_DATE")?>: <?= $arResult['CACHE_CREATE_DATA'] ?></li>
         <?php endif ?>
-
-        #TEST#
-
+        #REQUEST_DATE#
     </ul>
-    <a id="update_data">Обновить</a>
+    <a id="update_data"><?= Loc::getMessage("LIST_OUTPUT_UPDATE")?></a>
 </div>
 
 <script>

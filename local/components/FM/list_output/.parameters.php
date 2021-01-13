@@ -1,5 +1,7 @@
-<?
-if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true) die();
+
+use Bitrix\Main\Localization\Loc;
+
 /** @var array $arCurrentValues */
 
 if(!CModule::IncludeModule("iblock"))
@@ -22,7 +24,7 @@ $arComponentParameters = array(
     "PARAMETERS" => array(
         "IBLOCK_TYPE" => array(
             "PARENT" => "BASE",
-            "NAME" => GetMessage("T_IBLOCK_DESC_LIST_TYPE"),
+            "NAME" => Loc::getMessage("T_IBLOCK_DESC_LIST_TYPE"),
             "TYPE" => "LIST",
             "VALUES" => $arTypesEx,
             "DEFAULT" => "news",
@@ -30,7 +32,7 @@ $arComponentParameters = array(
         ),
         "IBLOCK_ID" => array(
             "PARENT" => "BASE",
-            "NAME" => GetMessage("T_IBLOCK_DESC_LIST_ID"),
+            "NAME" => Loc::getMessage("T_IBLOCK_DESC_LIST_ID"),
             "TYPE" => "LIST",
             "VALUES" => $arIBlocks,
             "DEFAULT" => '={$_REQUEST["ID"]}',
@@ -39,12 +41,12 @@ $arComponentParameters = array(
         ),
         "SET_TITLE"  =>  array(
             "PARENT"    =>  "BASE",
-            "NAME"      =>  "Установка Title",
+            "NAME"      =>  Loc::getMessage("SET_TITLE"),
             "TYPE"      =>  "CHECKBOX",
         ),
         "RULE_SHOW"   =>  array(
             "PARENT"    =>  "LIST",
-            "NAME"      =>  "Правило показа",
+            "NAME"      =>  Loc::getMessage("RULE_SHOW"),
             "TYPE"      =>  "LIST",
             "VALUES"    =>  array(
                 "rand" =>  "Случайно",
@@ -54,7 +56,7 @@ $arComponentParameters = array(
         ),
         "ELEMENT_FIELDS"    =>  array(
             "PARENT"    =>  "BASE",
-            "NAME"      =>  "Поля элемента",
+            "NAME"      =>  Loc::getMessage("ELEMENT_FIELDS"),
             "TYPE"      =>  "STRING",
             "DEFAULT"   =>  "NAME, ID"
         ),

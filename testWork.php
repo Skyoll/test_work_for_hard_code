@@ -18,7 +18,7 @@ $APPLICATION->IncludeComponent(
 		"IBLOCK_TYPE" => "news",
 		"IBLOCK_ID" => "1",
 		"RULE_SHOW" => "rand",
-		"SET_TITLE" => "Y",
+		"SET_TITLE" => "N",
 		"ELEMENT_FIELDS" => "NAME,ID",
 		"COMPONENT_TEMPLATE" => ".default"
 	),
