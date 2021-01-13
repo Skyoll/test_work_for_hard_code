@@ -11,7 +11,6 @@ class ListOutput extends \CBitrixComponent
     private $ruleShow;
     private $arFieldsElement;
     private $isAjax;
-    private $requestTime;
 
     public function onPrepareComponentParams($params)
     {
