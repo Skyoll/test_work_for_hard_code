@@ -1,4 +1,4 @@
-<?if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
+<?php if (!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 use Bitrix\Main\Localization\Loc;
 
@@ -19,7 +19,6 @@ $this->setFrameMode(true);
     <ul>
         <li><?= Loc::getMessage("LIST_OUTPUT_ID")?>: <?= $arResult['ITEM']['ID'] ?></li>
         <li><?= Loc::getMessage("LIST_OUTPUT_NAME")?>: <?= $arResult['ITEM']['NAME'] ?></li>
-
         <?php if (!empty($arResult['CACHE_CREATE_DATA'])): ?>
             <li><?= Loc::getMessage("LIST_OUTPUT_CACHE_DATE")?>: <?= $arResult['CACHE_CREATE_DATA'] ?></li>
         <?php endif ?>

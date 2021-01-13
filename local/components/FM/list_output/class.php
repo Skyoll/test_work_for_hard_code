@@ -1,6 +1,5 @@
 <?php
 
-
 class ListOutput extends \CBitrixComponent
 {
     const CACHE_TIME = 3600;

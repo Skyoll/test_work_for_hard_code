@@ -1,15 +1,6 @@
-<?
+<?php require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 
-require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 global $APPLICATION;
-
-
-//$APPLICATION->ShowTitle("titleWeather");
-?>
-
-<?php
-
-$test = 1;
 
 $APPLICATION->IncludeComponent(
 	"FM:list_output", 
@@ -24,6 +15,6 @@ $APPLICATION->IncludeComponent(
 	),
 	false
 );
-
 ?>
-    </p><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

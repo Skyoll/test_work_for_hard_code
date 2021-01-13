@@ -5,6 +5,7 @@ use Bitrix\Main\Localization\Loc;
 /** @var array $arParams */
 
 global $APPLICATION;
+
 if (isset($arResult['ITEM']) && !empty($arResult['ITEM']) && $arParams['SET_TITLE'] === 'Y') {
 
     $APPLICATION->SetTitle($arResult['ITEM']['NAME']);
